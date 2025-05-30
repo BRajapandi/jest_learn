@@ -1,19 +1,19 @@
-import { render, screen } from '@testing-library/react';
-import Login from '../Login';
-import userEvent from '@testing-library/user-event';
+import { render, screen } from "@testing-library/react";
+import Login from "../Login";
+import userEvent from "@testing-library/user-event";
 
-test('checking component loaded', () => {
+test("checking component loaded", () => {
   render(<Login />);
-  expect(screen.queryByText('Login')).toBeInTheDocument();
+  expect(screen.queryByText("Login")).toBeInTheDocument();
 });
-test('checking email & password inputs', () => {
+test("checking email & password inputs", () => {
   render(<Login />);
-  expect(screen.queryByPlaceholderText('Email')).toHaveValue('');
-  expect(screen.queryByPlaceholderText('Password')).toHaveValue('');
+  expect(screen.queryByPlaceholderText("Email")).toHaveValue("");
+  expect(screen.queryByPlaceholderText("Password")).toHaveValue("");
 });
 
-test('toClick a event', () => {
+test("toClick a event", () => {
   render(<Login />);
-  const buttonEle = screen.getByText('Signin');
+  const buttonEle = screen.getByText("Signin");
   userEvent.click(buttonEle);
 });

@@ -1,9 +1,9 @@
-import Login from './fromJvl/Login';
-import Greet from './fromCodeEvol/Greet';
+import Login from "./fromJvl/Login";
+import Greet from "./fromCodeEvol/Greet";
 
 function App() {
   return (
-    <div className='App'>
+    <div className="App">
       <Login />
       <Greet />
     </div>
